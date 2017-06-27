@@ -1,0 +1,60 @@
+        #run the registration process in models.py
+        # error_count = 0
+        # if len(request.POST['first_name']) < 2: 
+        #     error_count += 1
+        #     messages.error(request, 'First name is too short.')
+        # if len(request.POST['last_name']) < 2:
+        #     error_count += 1
+        #     messages.error(request, 'Last name is too short.')
+        # if len(request.POST['password']) < 8:
+        #     error_count += 1
+        #     messages.error(request, 'Password too short.')           
+        # if request.POST['password'] != request.POST['confirm_pw']:
+        #     error_count += 1
+        #     messages.error(request, 'Please enter matching passwords.')
+        # if len(request.POST['email']) < 2:
+        #     error_count += 1
+        #     messages.error(request, 'email too short.')
+        # if error_count < 1:
+        #         Users.objects.all().delete()
+        #         print error_count
+        #         request.session['first_name'] = request.POST['first_name']
+        #         reg_password = request.POST['password']
+        #         encoded_pw = reg_password.encode(encoding="utf-8", errors="strict")
+        #         hashed = bcrypt.hashpw(encoded_pw, bcrypt.gensalt())
+        #         print hashed
+        #         Users.objects.create(first_name=request.POST['first_name'], last_name=request.POST['last_name'], email=request.POST['email'], password=hashed)
+        #         print request.session['first_name'], 'has been successfully registered!'
+        # #         print Users.objects.all()
+        #         return redirect('/show')
+        # else:
+        #     print "registration aborted"
+        #     return redirect('/')
+
+# def password(password):
+#     import bcrypt
+    
+
+     # email_input= request.POST['email']
+        # pw_input = request.POST['password']
+        # # encoded_pw = pw_input.encode(encoding="utf-8", errors="strict")
+        # # re_hash = bcrypt.hashpw(encoded_pw, bcrypt.gensalt())
+        # checking = Users.objects.filter(email=email_input)
+        # print checking
+        # if not checking:
+        #     messages.error(request, 'Please verify correct credentials')
+        # if checking:
+        #     checking_pw = Users.objects.filter(password=pw_input)
+        #     if bcrypt.hashpw(pw_input, hashed) == hashed:
+        #         print checking_pw
+        #         print '...password match!..'
+        #         return redirect('/show')
+        #     else:
+        #         print "...couldn't find user...."
+        #         return redirect('/')    
+        # # return redirect(request, 'log_regis/index.html', context)
+        
+        # #how do check to verify here?
+        # else:
+        #     return redirect('/')
+

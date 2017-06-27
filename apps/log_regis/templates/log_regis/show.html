@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Show</title>
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+        <h2>Welcome, {{request.session.name}}!</h2>
+ 
+        <div>
+            {{request.session.pokes}}
+        </div>
+
+        <h2>People you may want to poke:</h2>
+        <tr>
+            {% for user in users%}
+            <th>Name</th>
+            <th>Alias</th>
+            <th>Email Address</th>
+            <th>Poke History</th>
+            <th>Action</th>
+        </tr>
+
+        <tr>
+            <th>{{user.name}}</th>
+            <td>{{user.alias}}</td>
+            <td>{{user.email}}</td>
+            {%endfor%}
+            <form action='/process' method='post'>
+            {%csrf_token%}
+            <td><input type='submit' value='Poke!'></td>
+            </form>
+        </tr>
+    </body>
+
+
+    <html>
